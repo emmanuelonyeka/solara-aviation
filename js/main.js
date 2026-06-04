@@ -16,17 +16,20 @@ const testimonials = [
   { quote: 'Our firm requires discretion and reliability above all else. Solara delivers both, consistently. The 24/7 support team has handled every last-minute change without a single issue.', name: 'Corporate Client', role: 'Managing Partner, Law Firm', location: 'Monaco' },
 ];
 (function injectTestimonials() {
-  const grid = document.getElementById('testiGrid');
-  if (!grid) return;
-  testimonials.forEach((t) => {
+  const track = document.getElementById('testiTrack');
+  if (!track) return;
+  const make = (t) => {
     const card = document.createElement('div');
-    card.className = 'anim-section testi-card';
+    card.className = 'testi-card';
     card.innerHTML =
       '<p class="quote">&ldquo;' + t.quote + '&rdquo;</p>' +
       '<div class="who"><div class="av"><span>' + t.name.charAt(0) + '</span></div>' +
       '<div><p class="nm">' + t.name + '</p><p class="rl">' + t.role + ' &middot; ' + t.location + '</p></div></div>';
-    grid.appendChild(card);
-  });
+    return card;
+  };
+  // duplicate the set so the -50% keyframe loops seamlessly
+  testimonials.forEach((t) => track.appendChild(make(t)));
+  testimonials.forEach((t) => track.appendChild(make(t)));
 })();
 
 /* ---------- Navbar ---------- */
@@ -37,23 +40,45 @@ const testimonials = [
   let open = false;
 
   const onScroll = () => {
-    if (window.scrollY > 60) nav.classList.add('scrolled');
-    else if (!open) nav.classList.remove('scrolled');
+    const y = window.scrollY;
+    if (y < 800) {
+      // top + first 50px: transparent header stays visible
+      nav.classList.add('at-top');
+      nav.classList.remove('hiding', 'revealed');
+    } else if (y < 800) {
+      // 50–120px: transparent header subtly fades out
+      nav.classList.add('hiding');
+      nav.classList.remove('at-top', 'revealed');
+    } else {
+      // past 120px: black sticky header subtly fades in
+      nav.classList.add('revealed');
+      nav.classList.remove('at-top', 'hiding');
+    }
   };
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 
-  burger.addEventListener('click', () => {
-    open = !open;
-    menu.classList.toggle('open', open);
-    document.body.style.overflow = open ? 'hidden' : '';
-    nav.classList.toggle('scrolled', open || window.scrollY > 60);
-    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
-  });
-  // close menu when a link is tapped
-  menu.querySelectorAll('a').forEach((a) => a.addEventListener('click', () => {
-    open = false; menu.classList.remove('open'); document.body.style.overflow = '';
-  }));
+  const closeBtn = document.getElementById('menuClose');
+  const links = Array.from(menu.querySelectorAll('.m-link'));
+
+  function setLinkStagger(opening) {
+    // each link animates individually, fast-in then slow-out (ease handled in CSS),
+    // staggered 60ms apart, bottom -> top
+    links.forEach((el, i) => {
+      el.style.transitionDelay = opening ? (i * 60) + 'ms' : '0ms';
+    });
+  }
+  function setOpen(v) {
+    open = v;
+    setLinkStagger(v);
+    menu.classList.toggle('open', v);
+    document.body.style.overflow = v ? 'hidden' : '';
+    nav.classList.toggle('revealed', open || window.scrollY > 120);
+    burger.setAttribute('aria-expanded', v ? 'true' : 'false');
+  }
+  burger.addEventListener('click', () => setOpen(!open));
+  if (closeBtn) closeBtn.addEventListener('click', () => setOpen(false));
+  links.forEach((a) => a.addEventListener('click', () => setOpen(false)));
 })();
 
 /* ---------- Lenis smooth scroll ---------- */
@@ -88,7 +113,7 @@ function pinnedTimeline(triggerId, end) {
 (function hero() {
   const words = gsap.utils.toArray('#heroHeadline .hero-word');
   // entrance
-  const tl = gsap.timeline({ delay: 0.3 });
+  const tl = gsap.timeline({ delay: 0.1 });
   tl.fromTo('#heroBg', { opacity: 0, scale: 1.06 }, { opacity: 1, scale: 1, duration: 1.2, ease: 'power2.out' }, 0);
   tl.fromTo(words, { y: prefersReduced ? 20 : 60, rotateX: prefersReduced ? 0 : 28, opacity: 0 }, { y: 0, rotateX: 0, opacity: 1, duration: 0.9, stagger: 0.06, ease: 'power2.out' }, 0.3);
   tl.fromTo('#heroSub', { y: 28, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7, ease: 'power2.out' }, 0.8);
@@ -263,10 +288,6 @@ function pinnedTimeline(triggerId, end) {
     scrollTrigger: { trigger: '#contact', start: 'top 75%', toggleActions: 'play none none reverse' } });
   gsap.fromTo('#bookCta', { y: 18, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7, ease: 'power2.out',
     scrollTrigger: { trigger: '#contact', start: 'top 70%', toggleActions: 'play none none reverse' } });
-  gsap.fromTo('#bookContact', { y: 12, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, ease: 'power2.out',
-    scrollTrigger: { trigger: '#bookContact', start: 'top 90%', toggleActions: 'play none none reverse' } });
-  gsap.fromTo('#bookFoot', { y: 12, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, ease: 'power2.out',
-    scrollTrigger: { trigger: '#bookFoot', start: 'top 95%', toggleActions: 'play none none reverse' } });
 })();
 
 /* ============================================================
@@ -283,23 +304,47 @@ if (!prefersReduced) {
       end: (st.end ?? st.start) / maxScroll,
       center: (st.start + ((st.end ?? st.start) - st.start) * 0.5) / maxScroll,
     }));
+    // Build "settled" snap targets: the point in each pinned section where ALL
+    // content is fully revealed and done animating (measured at timeline progress
+    // ~0.525, the centre of the settled window 0.50–0.575).
+    const SETTLE = 0.525;
+    const settleRanges = pinned.map((st) => {
+      const span = (st.end ?? st.start) - st.start;
+      return {
+        start: st.start / maxScroll,
+        end: (st.end ?? st.start) / maxScroll,
+        target: (st.start + span * SETTLE) / maxScroll,
+      };
+    });
+
     ScrollTrigger.create({
       snap: {
         snapTo: (value) => {
-          const inPinned = ranges.some((r) => value >= r.start - 0.02 && value <= r.end + 0.02);
+          // stay at true top so the transparent hero header shows on load
+          if (value <= 0.02) return 0;
+          const inPinned = settleRanges.some((r) => value >= r.start - 0.02 && value <= r.end + 0.02);
           if (!inPinned) return value;
-          return ranges.reduce((closest, r) =>
-            Math.abs(r.center - value) < Math.abs(closest - value) ? r.center : closest,
-            ranges[0] ? ranges[0].center : 0);
+          const nearest = settleRanges.reduce((closest, r) =>
+            Math.abs(r.target - value) < Math.abs(closest - value) ? r.target : closest,
+            settleRanges[0] ? settleRanges[0].target : value);
+          return nearest <= 0.02 ? value : nearest;
         },
-        duration: { min: 0.15, max: 0.35 },
+        duration: { min: 0.2, max: 0.4 },
         delay: 0,
-        ease: 'power2.out',
+        ease: 'power2.inOut',
       },
     });
     ScrollTrigger.refresh();
   }, 500);
 }
+
+function updateSize() {
+  const width = window.innerWidth;
+  const height = window.innerHeight;
+  document.getElementById('viewport-size').textContent = `${width}px x ${height}px`;
+}
+window.addEventListener('resize', updateSize);
+updateSize(); // Initial call
 
 /* Refresh after all images load so pin positions are correct */
 window.addEventListener('load', () => ScrollTrigger.refresh());
