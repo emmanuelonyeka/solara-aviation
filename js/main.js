@@ -338,7 +338,7 @@ if (!prefersReduced) {
   }, 500);
 }
 
-function updateSize() {
+/*function updateSize() {
   const width = window.innerWidth;
   const height = window.innerHeight;
   document.getElementById('viewport-size').textContent = `${width}px x ${height}px`;
@@ -346,5 +346,5 @@ function updateSize() {
 window.addEventListener('resize', updateSize);
 updateSize(); // Initial call
 
-/* Refresh after all images load so pin positions are correct */
-window.addEventListener('load', () => ScrollTrigger.refresh());
+/* Refresh after all images load so pin positions are correct 
+window.addEventListener('load', () => ScrollTrigger.refresh()); */
