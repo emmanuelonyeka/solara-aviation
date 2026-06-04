@@ -11,7 +11,7 @@
   <meta property="og:type" content="website" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,400&family=Inter:wght@300..700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
@@ -39,6 +39,9 @@
 
   <!-- MOBILE MENU -->
   <div class="mobile-menu" id="mobileMenu">
+    <button class="menu-close" id="menuClose" aria-label="Close menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+    </button>
     <div class="mobile-menu-inner">
       <a href="fleet.html" class="m-link">Charter</a>
       <a href="membership.html" class="m-link">Membership</a>
@@ -46,7 +49,7 @@
       <a href="safety.html" class="m-link">Safety</a>
       <a href="about.html" class="m-link">About</a>
       <a href="contact.html" class="m-link">Contact</a>
-      <a href="quote.html" class="btn-beige-filled m-link" style="margin-top:1rem;">Request a quote</a>
+      <a href="quote.html" class="m-link m-cta">Request a quote</a>
     </div>
   </div>
 
@@ -60,12 +63,12 @@
       </div>
       <div class="hero-content">
         <h1 id="heroHeadline">
-          <span class="hero-word text-beige">Above</span>
-          <span class="hero-word text-white">the</span>
-          <span class="hero-word text-white">Clouds</span>
+          <span class="hero-word text-beige" style="opacity:0">Above</span>
+          <span class="hero-word text-white" style="opacity:0">the</span>
+          <span class="hero-word text-white" style="opacity:0">Clouds</span>
         </h1>
-        <p class="hero-sub" id="heroSub">Private jet charter and membership—designed around your time, your schedule, and the way you travel.</p>
-        <div class="hero-cta" id="heroCta">
+        <p class="hero-sub" id="heroSub" style="opacity:0">Private jet charter and membership—designed around your time, your schedule, and the way you travel.</p>
+        <div class="hero-cta" id="heroCta" style="opacity:0">
           <a href="quote.html" class="btn-beige-filled">Request a quote</a>
           <a href="membership.html" class="link-underline">Explore membership</a>
         </div>
@@ -122,7 +125,7 @@
 
     <!-- Fleet teaser CTA -->
     <div class="teaser" style="z-index:4;">
-      <a href="fleet.html">View the full fleet
+      <a href="fleet.html" style="text-transform:uppercase;letter-spacing:0.1em;">View the full fleet
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
       </a>
     </div>
@@ -174,7 +177,7 @@
 
     <!-- Destinations teaser CTA -->
     <div class="teaser" style="z-index:6;">
-      <a href="destinations.html">Explore all destinations
+      <a href="destinations.html" style="text-transform:uppercase;letter-spacing:0.1em;">Explore all destinations
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
       </a>
     </div>
@@ -255,7 +258,7 @@
 
     <!-- Membership teaser CTA -->
     <div class="teaser" style="z-index:9;">
-      <a href="membership.html">See full membership details
+      <a href="membership.html" style="text-transform:uppercase;letter-spacing:0.1em;">See full membership details
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
       </a>
     </div>
@@ -264,11 +267,11 @@
     <section class="trust" id="trust">
       <div class="anim-section trust-box">
         <div class="trust-grid">
-          <div class="trust-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F3F0E6" stroke-opacity="0.6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin:0 auto 0.75rem;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg><span>Safety Audited</span></div>
-          <div class="trust-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F3F0E6" stroke-opacity="0.6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin:0 auto 0.75rem;"><circle cx="12" cy="8" r="6"></circle><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"></path></svg><span>5,000+ Hr Pilots</span></div>
-          <div class="trust-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F3F0E6" stroke-opacity="0.6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin:0 auto 0.75rem;"><circle cx="12" cy="12" r="10"></circle><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg><span>180+ Destinations</span></div>
-          <div class="trust-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F3F0E6" stroke-opacity="0.6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin:0 auto 0.75rem;"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg><span>24/7 Operations</span></div>
-          <div class="trust-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F3F0E6" stroke-opacity="0.6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin:0 auto 0.75rem;"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"></path></svg><span>98% Retention</span></div>
+          <div class="trust-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F3F0E6" stroke-opacity="1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin:0 auto 0.75rem;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg><span>Safety Audited</span></div>
+          <div class="trust-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F3F0E6" stroke-opacity="1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin:0 auto 0.75rem;"><circle cx="12" cy="8" r="6"></circle><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"></path></svg><span>5,000+ Hr Pilots</span></div>
+          <div class="trust-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F3F0E6" stroke-opacity="1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin:0 auto 0.75rem;"><circle cx="12" cy="12" r="10"></circle><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg><span>180+ Destinations</span></div>
+          <div class="trust-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F3F0E6" stroke-opacity="1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin:0 auto 0.75rem;"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg><span>24/7 Operations</span></div>
+          <div class="trust-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F3F0E6" stroke-opacity="1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin:0 auto 0.75rem;"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"></path></svg><span>98% Retention</span></div>
         </div>
       </div>
     </section>
@@ -278,7 +281,7 @@
       <div class="anim-section testi-label">
         <div class="rule"></div><span class="micro-label" style="color:rgba(255,255,255,0.5);">TESTIMONIALS</span>
       </div>
-      <div class="testi-grid" id="testiGrid"><!-- cards injected by JS --></div>
+      <div class="testi-marquee"><div class="testi-track" id="testiTrack"><!-- cards injected by JS --></div></div>
     </section>
 
     <!-- SECTION 9: BOOK / FOOTER -->
@@ -292,26 +295,64 @@
         <p class="book-sub" id="bookSub">Tell us where you're headed. We'll handle aircraft selection, scheduling, and every detail.</p>
         <div class="book-cta" id="bookCta">
           <a href="quote.html" class="btn-beige-filled">Request a quote</a>
-          <a href="tel:+18885550147" class="callus">Call us</a>
+          <a href="tel:+18885550147" class="link-underline">Call us</a>
         </div>
       </div>
-      <div class="book-bottom">
-        <div class="book-bottom-inner">
-          <div class="book-contact" id="bookContact">
-            <a href="mailto:fly@solara.com">fly@solara.com</a>
-            <a href="tel:+18885550147">+1 (888) 555-0147</a>
-            <span class="micro-label">24/7 Flight Support</span>
-          </div>
-          <div class="book-foot" id="bookFoot">
-            <div class="row1"><a href="#">Instagram</a><a href="#">LinkedIn</a></div>
-            <div class="row2"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><span>&copy; Solara Jets</span></div>
-          </div>
-        </div>
-      </div>
-      <div class="book-micro micro-label">BOOK</div>
     </section>
 
+    <!-- FULL SITE FOOTER -->
+    <footer class="site-footer">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">Solara</a>
+          <p>Private jet charter and membership — designed around your time, your schedule, and the way you travel.</p>
+          <div class="contact">
+            <a href="tel:+18885550147"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.81.36 1.6.7 2.34a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.74-1.27a2 2 0 0 1 2.11-.45c.74.34 1.53.57 2.34.7A2 2 0 0 1 22 16.92z"></path></svg>+1 (888) 555-0147</a>
+            <a href="mailto:fly@solarajets.com"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-10 5L2 7"></path></svg>fly@solarajets.com</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a class="footer-link" href="about.html">About</a></li>
+            <li><a class="footer-link" href="safety.html">Safety</a></li>
+            <li><a class="footer-link" href="experience.html">Experience</a></li>
+            <li><a class="footer-link" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a class="footer-link" href="fleet.html">Aircraft Fleet</a></li>
+            <li><a class="footer-link" href="membership.html">Membership</a></li>
+            <li><a class="footer-link" href="destinations.html">Destinations</a></li>
+            <li><a class="footer-link" href="quote.html">Request a Quote</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a class="footer-link" href="privacy.html">Privacy Policy</a></li>
+            <li><a class="footer-link" href="terms.html">Terms of Service</a></li>
+            <li><a class="footer-link" href="disclosures.html">Regulatory Disclosures</a></li>
+            <li><span class="footer-loc"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>Worldwide Operations</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="copy">&copy; 2026 Solara Jets. All rights reserved. This is a fictional brand for demonstration purposes.</p>
+        <div class="footer-social">
+          <a href="#">Instagram</a>
+          <a href="#">LinkedIn</a>
+          <a href="#">X</a>
+        </div>
+      </div>
+    </footer>
+
   </main>
+
+  <div id="viewport-size" style="position: fixed; bottom: 10px; right: 10px; background: #333; color: #fff; padding: 5px 10px; border-radius: 5px; font-family: monospace; font-size: 14px; z-index: 999999999;"></div>
+
 
   <!-- Libraries: GSAP + ScrollTrigger + Lenis (bundled locally) -->
   <script src="js/lib/gsap.min.js"></script>
