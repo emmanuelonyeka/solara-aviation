@@ -1,0 +1,6 @@
+/* Desktop navigation is deliberately colour-only. Active routes stay white,
+   inactive routes transition to white, and the shared focus ring supplies the
+   keyboard affordance without repeating the underline used on other brands. */
+.desktop-nav-link {
+  text-decoration: none;
+}

@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 14% 4%;
+    --foreground: 0 0% 100%;
+    --card: 220 14% 4%;
+    --card-foreground: 0 0% 100%;
+    --popover: 220 14% 4%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 45 33% 92%;
+    --primary-foreground: 220 14% 4%;
+    --secondary: 220 6% 12%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 220 6% 12%;
+    --muted-foreground: 225 5% 73%;
+    --accent: 45 33% 92%;
+    --accent-foreground: 220 14% 4%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 220 6% 18%;
+    --input: 220 6% 18%;
+    --ring: 45 33% 92%;
+    --radius: 0px;
+    /* Page margin. Referenced by the Tailwind `gutter` spacing token,
+       so px-gutter and calc(var(--gutter)*-1) always agree. */
+    --gutter: max(1.25rem, 9vw);
+    --beige: #F3F0E6;
+    --charcoal: #0B0C0F;
+    --ease-lux: cubic-bezier(0.22, 1, 0.36, 1);
+  }
+}
+
+@layer base {
+  * { @apply border-border; }
+  html { scroll-behavior: auto; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+  body { @apply bg-[#0B0C0F] text-white antialiased; font-family: 'Inter', system-ui, sans-serif; overflow-x: hidden; }
+  h1, h2, h3, h4, h5, h6 { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 400; letter-spacing: -0.02em; line-height: 0.95; }
+  ::selection { background: rgba(243, 240, 230, 0.85); color: #0B0C0F; }
+}
+
+@layer components {
+  .micro-label { font-family: 'Inter', system-ui, sans-serif; font-size: 12px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; line-height: 1.35; }
+
+  .btn-beige-filled {
+    position: relative; display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+    padding: clamp(9.5px, 0.244vw + 8.65px, 12.8px) 1.6rem; border: 1px solid var(--beige); background-color: var(--beige); background-clip: padding-box; color: var(--charcoal);
+    font-family: 'Inter', system-ui, sans-serif; font-size: clamp(0.875rem, 0.86rem + 0.07vw, 0.9375rem); font-weight: 500; letter-spacing: 0.025em;
+    cursor: pointer; overflow: hidden; isolation: isolate; white-space: nowrap; -webkit-tap-highlight-color: transparent;
+    transition: transform 180ms var(--ease-lux), color 0.55s var(--ease-lux), border-color 0.4s ease; will-change: transform;
+  }
+  .btn-beige-filled::before { content: ''; position: absolute; inset: 0; z-index: -1; background: var(--charcoal); transform: scaleY(0); transform-origin: bottom; transition: transform 0.85s var(--ease-lux); }
+
+  .btn-beige-outline {
+    position: relative; display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+    padding: clamp(9.9px, 0.644vw + 7.65px, 12.8px) clamp(18.4px, 1.6vw + 12.8px, 25.6px); border: 1px solid rgba(243, 240, 230, 0.55); color: var(--beige);
+    font-family: 'Inter', system-ui, sans-serif; font-size: clamp(12.5px, 0.333vw + 11.33px, 14px); font-weight: 500; letter-spacing: 0.025em;
+    cursor: pointer; background: transparent; overflow: hidden; isolation: isolate; white-space: nowrap; -webkit-tap-highlight-color: transparent;
+    transition: transform 180ms var(--ease-lux), border-color 0.4s var(--ease-lux), color 0.4s var(--ease-lux);
+  }
+  .btn-beige-outline::before { content: ''; position: absolute; inset: 0; z-index: -1; background: var(--beige); transform: scaleY(0); transform-origin: bottom; transition: transform 0.85s var(--ease-lux); }
+  .btn-beige-outline.text-xs { font-size: clamp(11px, 0.222vw + 10.22px, 12px) !important; }
+
+  .nudge-arrow { transition: transform 0.4s var(--ease-lux); }
+
+  .link-underline { position: relative; display: inline-block; color: inherit; transition: color 0.3s ease; }
+  .link-underline::after { content: ''; position: absolute; left: 0; bottom: -2px; width: 100%; height: 1px; background: currentColor; transform: scaleX(0); transform-origin: right; transition: transform 0.4s var(--ease-lux); }
+  .link-underline:active { opacity: 0.55; }
+
+  .card-lux { position: relative; transition: transform 0.5s var(--ease-lux), border-color 0.5s var(--ease-lux), box-shadow 0.5s var(--ease-lux); will-change: transform; }
+  .img-zoom { overflow: hidden; }
+  .img-zoom img { transition: transform 0.9s var(--ease-lux), filter 0.6s ease; will-change: transform; }
+
+  @media (hover: hover) and (pointer: fine) {
+    .btn-beige-filled:hover { color: var(--beige); border-color: rgba(243, 240, 230, 0.42); transform: translateY(-2px); }
+    .btn-beige-filled:hover::before { transform: scaleY(1); }
+    .btn-beige-outline:hover { color: var(--charcoal); border-color: var(--beige); transform: translateY(-2px); }
+    .btn-beige-outline:hover::before { transform: scaleY(1); }
+    .group:hover .nudge-arrow, a:hover > .nudge-arrow, button:hover > .nudge-arrow { transform: translateX(4px); }
+    .link-underline:hover::after { transform: scaleX(1); transform-origin: left; }
+    .card-lux:hover { transform: translateY(-6px); border-color: rgba(243, 240, 230, 0.4) !important; box-shadow: 0 24px 50px -24px rgba(0, 0, 0, 0.8); }
+    .card-lux:hover .img-zoom img, .img-zoom:hover img { transform: scale(1.06); }
+  }
+
+  .btn-beige-filled:active, .btn-beige-outline:active { transform: scale(0.97); transition-duration: 120ms; }
+}
+
+.grain-overlay { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; pointer-events: none; z-index: 9999; opacity: 0.06; mix-blend-mode: overlay; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E"); }
+
+.scroll-progress { position: fixed; top: 0; left: 0; height: 2px; background: linear-gradient(90deg, rgba(243,240,230,0.4), var(--beige)); z-index: 10000; transform-origin: left; will-change: transform; }
+
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+.lenis.lenis-stopped { overflow: hidden; }
+body::-webkit-scrollbar { width: 0px; background: transparent; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.001ms !important; transition-duration: 0.08s !important; scroll-behavior: auto !important; }
+  .btn-beige-filled:active, .btn-beige-outline:active { transform: none; }  .btn-beige-filled:active, .btn-beige-outline:active { transform: none; }
+}
+
+/* =============================================
+   GLOBAL INPUT FONT SIZE — prevent iOS zoom
+   iOS zooms in when input font-size < 16px
+   ============================================= */
+input, select, textarea {
+  font-size: 16px !important;
+}
+
+/* The 16px above is what stops iOS zooming on focus, so it has to stay on the
+   value. The placeholder is a separate target and can sit smaller. */
+input::placeholder,
+textarea::placeholder {
+  font-size: 0.8125rem;
+  opacity: 1;
+}
+
+/* Reload restoration veil.
+  Set before the first paint when a saved scroll position exists, and removed
+  the moment that position holds — so the reader never sees the top of the
+  page and then a jump. Last in the file so nothing can override it, and
+  removed on cleanup as well, so a failure can never leave the page blank. */
+:root[style*="--restore-veil"] body {
+  opacity: 0 !important;
+}

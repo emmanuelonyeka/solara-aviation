@@ -1,0 +1,12 @@
+export { default as HomeBooking } from './HomeBooking';
+export { default as HomeDestinations } from './HomeDestinations';
+export { default as HomeExperience } from './HomeExperience';
+export { default as HomeFleet } from './HomeFleet';
+export { default as HomeHero } from './HomeHero';
+export { default as HomeJourney } from './HomeJourney';
+export { default as HomeMembership } from './HomeMembership';
+export { default as HomeMembershipTiers } from './HomeMembershipTiers';
+export { default as HomeSafety } from './HomeSafety';
+export { default as HomeTeaser } from './HomeTeaser';
+export { default as HomeTestimonials } from './HomeTestimonials';
+export { default as HomeTrust } from './HomeTrust';

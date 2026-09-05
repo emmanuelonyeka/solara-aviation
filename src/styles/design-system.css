@@ -1,0 +1,18 @@
+/* Inner-page design system. Homepage geometry and pinned animation rules stay isolated. */
+.site-page {
+  font-synthesis: none;
+  --gutter: clamp(1.25rem, 5vw, 6.5rem);
+}
+
+.site-page :is(h1, h2, h3, h4, h5, h6) {
+  text-wrap: balance;
+}
+
+.site-page :is(h3, h4, h5, h6) {
+  line-height: 1.1;
+  letter-spacing: -0.012em;
+}
+
+.site-page :is(p, li) {
+  text-wrap: pretty;
+}

@@ -1,0 +1,3 @@
+# Netlify: every route is served by the app, which then routes client-side.
+# Without this, refreshing on /fleet or sharing /blog/some-post returns a 404.
+/*  /index.html  200
