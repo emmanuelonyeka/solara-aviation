@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useLocation } from 'react-router-dom';
 import { site } from '../../config/site';
@@ -25,6 +26,10 @@ export default function MetaTags({
   type = 'website',
   titleOrder = 'page-first',
 }: MetaTagsProps) {
+  useEffect(() => {
+    document.head.querySelectorAll('[data-static-meta]').forEach((element) => element.remove());
+  }, []);
+
   const location = useLocation();
   const baseUrl = site.url.replace(/\/$/, '');
   const routePath = location.pathname === '/' ? '/' : location.pathname.replace(/\/+$/, '');
