@@ -93,8 +93,8 @@ export default function Destinations() {
         title={['Closer than', 'the airline', 'can land you']}
         accent={[2]}
         lead="Private aviation reaches thousands of airports scheduled carriers cannot use. The destination is rarely the constraint — the runway near it is."
-        image="/images/destinations/maldives.jpg"
-        imageAlt="Aerial view of an island coastline"
+        image="/images/destinations_island_hero.jpg"
+        imageAlt="Private island coastline reached by private aviation"
         meta={[
           { label: 'Destinations', value: String(destinations.length) },
           { label: 'Regions', value: String(regions.length - 1) },

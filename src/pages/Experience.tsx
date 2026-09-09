@@ -75,7 +75,7 @@ export default function Experience() {
               'Full berthing on heavy and ultra-long-range cabins',
               'Lighting shifted through the flight on long sectors',
             ]}
-            image="/images/experience/cabin.jpg"
+            image="/images/fleet/g650-cabin.jpg"
             imageAlt="Cabin seating configured around a table"
             cta={{ label: 'Compare cabins', to: '/fleet' }}
           />
@@ -92,8 +92,8 @@ export default function Experience() {
               'Any dietary requirement, without a surcharge',
               'Service timed around sleep on overnight sectors',
             ]}
-            image="/images/fleet/g650.jpg"
-            imageAlt="Cabin table set for dining"
+            image="/images/experience/catering.webp"
+            imageAlt="Cabin table set with freshly plated inflight dining"
             cta={{ label: 'Ground arrangements', to: '/concierge' }}
           />
 
@@ -108,8 +108,8 @@ export default function Experience() {
               'Power at every seat, no adaptors needed',
               'Satellite voice where data cannot reach',
             ]}
-            image="/images/hero_clouds_wing.jpg"
-            imageAlt="Wing above a cloud layer at altitude"
+            image="/images/experience/connectivity.webp"
+            imageAlt="Passenger using a video call from a connected private jet cabin"
             cta={{ label: 'See the fleet', to: '/fleet' }}
           />
         </div>
@@ -134,7 +134,7 @@ export default function Experience() {
         lead="Rested, fed, and ready for the meeting — or left completely alone for nine hours. Both are configurations, and both are set before you board."
         primary={{ label: 'Request a quote', to: '/quote' }}
         secondary={{ label: 'Ground arrangements', to: '/concierge' }}
-        image="/images/experience/cabin.jpg"
+        image="/images/experience/night-cabin.webp"
       />
     </PageWrapper>
   );

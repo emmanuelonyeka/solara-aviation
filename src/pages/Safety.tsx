@@ -89,7 +89,7 @@ export default function Safety() {
         <div className="grid gap-stack lg:grid-cols-12 lg:gap-x-[6%]">
           <Reveal from="fade" className="overflow-hidden lg:col-span-6">
             <img
-              src="/images/fleet/challenger350.jpg"
+              src="/images/safety/preflight-inspection.webp"
               alt="Aircraft undergoing pre-flight checks"
               loading="lazy"
               className="aspect-[4/3] w-full object-cover"
@@ -119,8 +119,8 @@ export default function Safety() {
               'Diversion airports identified before departure',
               'Position shared with your security team on request',
             ]}
-            image="/images/hero_clouds_wing.jpg"
-            imageAlt="Wing above a cloud layer"
+            image="/images/safety/flight-watch.webp"
+            imageAlt="Dispatcher monitoring a private flight from the operations desk"
             cta={{ label: 'See the fleet', to: '/fleet' }}
           />
 
@@ -136,8 +136,8 @@ export default function Safety() {
               'No commercial pressure applied to a go decision',
               'Alternatives offered before you have to ask',
             ]}
-            image="/images/safety_runway_hero.jpg"
-            imageAlt="Runway lights in poor visibility"
+            image="/images/safety/weather-decision.webp"
+            imageAlt="Flight crew and dispatcher reviewing weather before departure"
             cta={{ label: 'Speak to operations', to: '/contact' }}
           />
         </div>
@@ -150,7 +150,7 @@ export default function Safety() {
         lead="Operator certificates, current audit findings and insurance certificates are sent on request. Most clients never ask. The ones who do tend to stay."
         primary={{ label: 'Request a quote', to: '/quote' }}
         secondary={{ label: 'Speak to operations', to: '/contact' }}
-        image="/images/fleet/challenger350.jpg"
+        image="/images/safety/audit-documents.webp"
       />
     </PageWrapper>
   );

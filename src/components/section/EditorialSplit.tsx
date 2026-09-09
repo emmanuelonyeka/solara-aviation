@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import type { ReactNode } from 'react';
 import Reveal from '../shared/Reveal';
 import TextReveal from './TextReveal';
+import { getImageFocalPoint } from '../../config/imageFocalPoints';
 
 interface EditorialSplitProps {
   index: string;
@@ -54,6 +55,7 @@ export default function EditorialSplit({
           src={image}
           alt={imageAlt}
           loading="lazy"
+          style={{ objectPosition: getImageFocalPoint(image) }}
           className="aspect-[4/3] w-full object-cover transition-transform duration-1200 ease-lux lg:aspect-[16/11] hoverable:scale-[1.03]"
         />
         <span className="pointer-events-none absolute inset-0 bg-gradient-to-t from-charcoal/45 to-transparent" />

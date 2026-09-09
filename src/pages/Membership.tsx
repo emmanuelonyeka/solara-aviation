@@ -212,8 +212,8 @@ export default function Membership() {
               'No surcharges for peak dates',
               'One invoice, drawn down flight by flight',
             ]}
-            image="/images/fleet/challenger350.jpg"
-            imageAlt="Private jet on the apron"
+            image="/images/membership/jet-card.webp"
+            imageAlt="Member reviewing a private jet card programme with an adviser"
             cta={{ label: 'See the fleet', to: '/fleet' }}
           />
 
@@ -229,8 +229,8 @@ export default function Membership() {
               'Cabin class guaranteed, aircraft assigned to the route',
               'Alternatives offered before you have to ask',
             ]}
-            image="/images/fleet/g650.jpg"
-            imageAlt="Private jet cabin interior"
+            image="/images/membership/guaranteed-aircraft.webp"
+            imageAlt="Member welcomed aboard a guaranteed private aircraft"
             cta={{ label: 'Safety standards', to: '/safety' }}
           />
         </div>
@@ -255,7 +255,7 @@ export default function Membership() {
         lead="If a card works out cheaper than a membership for your pattern, we will tell you that first. Send us a typical year and we will put the numbers side by side."
         primary={{ label: 'Request a proposal', to: '/quote' }}
         secondary={{ label: 'Speak to us', to: '/contact' }}
-        image="/images/membership_window_hero.jpg"
+        image="/images/membership/advisor.webp"
       />
     </PageWrapper>
   );

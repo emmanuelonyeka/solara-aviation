@@ -19,10 +19,10 @@ export const homeHero = {
   image: '/images/hero_clouds_wing.jpg',
   imageAlt: 'Above the clouds',
   thumbnails: [
-    '/images/destinations_island_hero.jpg',
-    '/images/fleet_hangar_hero.jpg',
-    '/images/journey_mountain.jpg',
-    '/images/safety_runway_hero.jpg',
+    '/images/destinations/dubai.jpg',
+    '/images/fleet/g280.jpg',
+    '/images/experience/cabin.jpg',
+    '/images/concierge/airside-transfer.webp',
   ],
 } as const;
 
@@ -31,7 +31,7 @@ export const homeExperience = {
   titleLead: 'Experience',
   titleAccent: 'Above the Clouds',
   description: 'From takeoff to touchdown, every detail is tuned for calm, with quiet cabins, personalized service and seamless logistics.',
-  cta: { label: 'See how we fly', to: '/fleet' },
+  cta: { label: 'See how we fly', to: '/experience' },
   image: '/images/experience_clouds.jpg',
   imageAlt: 'Experience above the clouds',
 } as const;
@@ -44,14 +44,14 @@ export const homeFleet = {
     { text: 'Journey', accent: false },
   ],
   description: 'From light jets to long range aircraft, choose the cabin, range and schedule that fit your trip.',
-  cta: { label: 'Explore the fleet', to: '/quote' },
+  cta: { label: 'Explore the fleet', to: '/fleet' },
   image: '/images/fleet_hangar_hero.jpg',
   imageAlt: 'Private jet fleet',
   thumbnails: [
-    '/images/safety_runway_hero.jpg',
-    '/images/destinations_island_hero.jpg',
-    '/images/journey_island.jpg',
-    '/images/hero_clouds_wing.jpg',
+    '/images/fleet/cj4.jpg',
+    '/images/fleet/latitude.jpg',
+    '/images/fleet/g650.jpg',
+    '/images/fleet/global7500.jpg',
   ],
 } as const;
 
@@ -60,14 +60,14 @@ export const homeDestinations = {
   titleAccent: 'Discover',
   titleRest: 'the World',
   description: 'Access remote coastlines, mountain resorts and key cities, often landing closer than commercial routes allow.',
-  cta: { label: 'View destinations', to: '/quote' },
+  cta: { label: 'View destinations', to: '/destinations' },
   image: '/images/destinations_island_hero.jpg',
   imageAlt: 'Tropical destination',
   thumbnails: [
-    '/images/journey_island.jpg',
-    '/images/journey_city.jpg',
-    '/images/closing_island_aerial.jpg',
-    '/images/experience_clouds.jpg',
+    '/images/destinations/aspen.jpg',
+    '/images/destinations/maldives.jpg',
+    '/images/destinations/monaco.jpg',
+    '/images/destinations/tokyo.jpg',
   ],
 } as const;
 
@@ -82,10 +82,10 @@ export const homeSafety = {
   image: '/images/safety_runway_hero.jpg',
   imageAlt: 'Safety and service',
   thumbnails: [
-    '/images/fleet_hangar_hero.jpg',
-    '/images/hero_clouds_wing.jpg',
-    '/images/membership_window_hero.jpg',
-    '/images/destinations_island_hero.jpg',
+    '/images/safety/preflight-inspection.webp',
+    '/images/safety/flight-watch.webp',
+    '/images/safety/weather-decision.webp',
+    '/images/safety/audit-documents.webp',
   ],
 } as const;
 
@@ -102,10 +102,10 @@ export const homeMembership = {
     author: 'Leonardo da Vinci',
   },
   thumbnails: [
-    '/images/journey_mountain.jpg',
-    '/images/membership_window_hero.jpg',
-    '/images/experience_clouds.jpg',
-    '/images/closing_island_aerial.jpg',
+    '/images/membership/jet-card.webp',
+    '/images/membership/guaranteed-aircraft.webp',
+    '/images/membership/advisor.webp',
+    '/images/experience/night-cabin.webp',
   ],
 } as const;
 
@@ -142,7 +142,7 @@ export const homeMembershipTiers = {
       id: 'tierB',
       title: 'Membership',
       description: 'Lower hourly rates, dedicated account manager, and priority scheduling across the fleet.',
-      cta: { label: 'Explore membership tiers', to: '/quote' },
+      cta: { label: 'Explore membership tiers', to: '/membership' },
     },
   ],
   features: ['Guaranteed availability', '24/7 support', 'Catering + ground transport'],

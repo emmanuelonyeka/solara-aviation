@@ -79,23 +79,27 @@ export const leadership: TeamMember[] = [
     name: 'Marcus Chen',
     role: 'Chief Executive',
     bio: 'Twenty-five years in aviation, previously an airline captain and then a fleet director. Still holds a current type rating.',
+    photo: '/images/team/marcus-chen.jpg',
   },
   {
     initials: 'SR',
     name: 'Sophia Reynolds',
     role: 'Operations',
     bio: 'Runs flight watch, dispatch and operator relationships. Has the final say on whether a sector goes.',
+    photo: '/images/team/sophia-reynolds.jpg',
   },
   {
     initials: 'DA',
     name: 'David Andersson',
     role: 'Safety',
     bio: 'Former military pilot with over eight thousand hours. Owns the audit programme and reports outside the commercial line.',
+    photo: '/images/team/david-andersson.jpg',
   },
   {
     initials: 'EL',
     name: 'Elena Laurent',
     role: 'Membership',
     bio: 'Works with members on the shape of their year, and is the one who will tell you a card is cheaper than a membership.',
+    photo: '/images/team/elena-laurent.jpg',
   },
 ];

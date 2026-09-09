@@ -164,8 +164,8 @@ export default function Fleet() {
         title={['Aircraft chosen', 'for the journey']}
         accent={[1]}
         lead="Every aircraft we operate is selected for one reason: it is the right one for a particular kind of flight. Nothing in the fleet exists to fill a gap in a brochure."
-        image="/images/fleet/global7500.jpg"
-        imageAlt="Private jet on the apron at dusk"
+        image="/images/fleet_hangar_hero.jpg"
+        imageAlt="A private jet fleet arranged inside a hangar"
         meta={[
           { label: 'Aircraft', value: String(aircraft.length) },
           { label: 'Cabin classes', value: String(categories.length - 1) },

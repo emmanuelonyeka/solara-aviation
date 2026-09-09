@@ -29,8 +29,8 @@ export default function Sustainability() {
         title={['Private flight', 'is carbon', 'intensive.', 'So is the', 'honesty.']}
         accent={[4]}
         lead="Nothing on this page will claim otherwise. What follows is what we actually do about it, what it does and does not achieve, and how you can check the numbers."
-        image="/images/hero_clouds_wing.jpg"
-        imageAlt="Wing above a cloud layer"
+        image="/images/sustainability/saf-refuelling.webp"
+        imageAlt="Private jet being refuelled with sustainable aviation fuel"
         meta={[
           { label: 'Offsetting', value: 'Every flight' },
           { label: 'SAF', value: 'Where sourced' },
@@ -97,8 +97,8 @@ export default function Sustainability() {
               'Routings planned to reduce positioning between bookings',
               'Aircraft matched to the trip, not to whichever is nearest',
             ]}
-            image="/images/fleet/latitude.jpg"
-            imageAlt="Private jet taxiing at dusk"
+            image="/images/sustainability/efficient-repositioning.webp"
+            imageAlt="Operations team planning an efficient aircraft repositioning route"
             cta={{ label: 'See available legs', to: '/empty-legs' }}
           />
 
@@ -114,8 +114,8 @@ export default function Sustainability() {
               'Quarterly breakdown by cost centre',
               'Methodology published, and we will defend it',
             ]}
-            image="/images/journey_mountain.jpg"
-            imageAlt="Aircraft above a mountain range"
+            image="/images/sustainability/emissions-report.webp"
+            imageAlt="Client reviewing a per-flight emissions report"
             cta={{ label: 'Corporate accounts', to: '/corporate' }}
           />
         </div>

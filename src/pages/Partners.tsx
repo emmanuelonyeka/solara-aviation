@@ -29,8 +29,8 @@ export default function Partners() {
         title={['The names', 'behind the', 'other ninety', 'hours']}
         accent={[2]}
         lead="A flight is a small part of a trip. These are the people who handle the rest of it, chosen the same way we choose an operator — and dropped the same way too."
-        image="/images/journey_island.jpg"
-        imageAlt="Coastal villa above a bay"
+        image="/images/partners/hospitality-network.webp"
+        imageAlt="Solara hospitality partners welcoming travellers at a coastal residence"
         meta={[
           { label: 'Partners', value: String(totalPartners) },
           { label: 'Categories', value: String(partnerGroups.length) },
@@ -146,8 +146,8 @@ export default function Partners() {
               'Same confidentiality terms we hold ourselves to',
               'Reviewed annually, not signed and forgotten',
             ]}
-            image="/images/journey_mountain.jpg"
-            imageAlt="Mountain retreat at dusk"
+            image="/images/partners/vetting.webp"
+            imageAlt="Solara team vetting a private aviation service partner"
             cta={{ label: 'Get in touch', to: '/contact' }}
           />
         </div>

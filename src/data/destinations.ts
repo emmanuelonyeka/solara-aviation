@@ -4,6 +4,7 @@ export interface Destination {
   country: string;
   region: string;
   image: string;
+  gallery: string[];
   description: string;
   whyFly: string;
   fboName: string;
@@ -18,6 +19,7 @@ export const destinations: Destination[] = [
     country: 'United States',
     region: 'North America',
     image: '/images/destinations/newyork.jpg',
+    gallery: ['/images/destinations/newyork-arrival.webp', '/images/destinations/newyork-fbo.webp'],
     description: 'The city that never sleeps — global finance, world-class dining, and iconic culture await.',
     whyFly: 'With multiple dedicated FBOs across Teterboro, Westchester, and Republic Airport, private aviation bypasses the congestion of JFK and LaGuardia entirely. Land minutes from Manhattan and step directly into a waiting vehicle.',
     fboName: 'Teterboro Airport (KTEB)',
@@ -30,6 +32,7 @@ export const destinations: Destination[] = [
     country: 'United Kingdom',
     region: 'Europe',
     image: '/images/destinations/london.jpg',
+    gallery: ['/images/destinations/london-arrival.webp', '/images/destinations/london-fbo.webp'],
     description: 'A global capital of finance, fashion, and culture — where tradition meets innovation.',
     whyFly: 'London offers unparalleled FBO infrastructure with Farnborough, Biggin Hill, and Luton providing dedicated private terminals. Clear customs in minutes and be in central London within 45 minutes of landing.',
     fboName: 'Farnborough Airport (EGLF)',
@@ -42,6 +45,7 @@ export const destinations: Destination[] = [
     country: 'France',
     region: 'Europe',
     image: '/images/destinations/paris.jpg',
+    gallery: ['/images/destinations/paris-arrival.webp', '/images/destinations/paris-fbo.webp'],
     description: 'The City of Light — haute couture, Michelin dining, and timeless romance.',
     whyFly: 'Le Bourget, the world\'s oldest dedicated business aviation airport, sits just 7 miles from the Champs-Elysees. Private terminals ensure seamless arrivals with dedicated customs and limousine service.',
     fboName: 'Paris-Le Bourget (LFPB)',
@@ -54,6 +58,7 @@ export const destinations: Destination[] = [
     country: 'UAE',
     region: 'Middle East',
     image: '/images/destinations/dubai.jpg',
+    gallery: ['/images/destinations/dubai-arrival.webp', '/images/destinations/dubai-fbo.webp'],
     description: 'Where ambition meets luxury — a futuristic oasis in the heart of the desert.',
     whyFly: 'Dubai International\'s Executive Flight Terminal and DWC\'s VIP Terminal offer the most luxurious FBO experience in the Middle East. From arrival to Burj Al Arab in under 30 minutes.',
     fboName: 'Dubai Executive Flight Terminal',
@@ -66,6 +71,7 @@ export const destinations: Destination[] = [
     country: 'Maldives',
     region: 'Asia Pacific',
     image: '/images/destinations/maldives.jpg',
+    gallery: ['/images/destinations/maldives-arrival.webp', '/images/destinations/maldives-fbo.webp'],
     description: 'Pristine atolls, crystal waters, and the ultimate escape from the everyday.',
     whyFly: 'Private jets land at Velana International, where seaplane transfers whisk you directly to your overwater villa. Many resorts have their own private islands accessible only by charter seaplane.',
     fboName: 'Velana International (VRMM)',
@@ -78,6 +84,7 @@ export const destinations: Destination[] = [
     country: 'United States',
     region: 'North America',
     image: '/images/destinations/aspen.jpg',
+    gallery: ['/images/destinations/aspen-arrival.webp', '/images/destinations/aspen-fbo.webp'],
     description: 'America\'s premier mountain playground — world-class skiing and Rocky Mountain luxury.',
     whyFly: 'Aspen/Pitkin County Airport sits at 7,820 feet with stunning mountain approaches. The airport\'s two FBOs offer ski valet, equipment handling, and direct shuttle service to luxury resorts.',
     fboName: 'Aspen/Pitkin County (KASE)',
@@ -90,6 +97,7 @@ export const destinations: Destination[] = [
     country: 'Japan',
     region: 'Asia Pacific',
     image: '/images/destinations/tokyo.jpg',
+    gallery: ['/images/destinations/tokyo-arrival.webp', '/images/destinations/tokyo-fbo.webp'],
     description: 'Ancient temples and neon skyscrapers — Japan\'s capital is a study in beautiful contrasts.',
     whyFly: 'Haneda Airport\'s dedicated private terminal offers the smoothest entry into Japan with private immigration lanes. Helicopter transfers to central Tokyo are available in under 20 minutes.',
     fboName: 'Tokyo Haneda (RJTT)',
@@ -102,6 +110,7 @@ export const destinations: Destination[] = [
     country: 'Australia',
     region: 'Asia Pacific',
     image: '/images/destinations/sydney.jpg',
+    gallery: ['/images/destinations/sydney-arrival.webp', '/images/destinations/sydney-fbo.webp'],
     description: 'Harbour sunsets, world-famous beaches, and effortless Australian sophistication.',
     whyFly: 'Sydney Airport\'s General Aviation terminal provides private check-in and customs processing. Seaplane and helicopter transfers offer spectacular harbour arrivals directly to waterfront hotels.',
     fboName: 'Sydney Kingsford Smith (YSSY)',
@@ -114,6 +123,7 @@ export const destinations: Destination[] = [
     country: 'Switzerland',
     region: 'Europe',
     image: '/images/destinations/geneva.jpg',
+    gallery: ['/images/destinations/geneva-arrival.webp', '/images/destinations/geneva-fbo.webp'],
     description: 'Alpine elegance meets international diplomacy on the shores of Lake Geneva.',
     whyFly: 'Geneva Airport\'s dedicated business aviation terminal processes arrivals in minutes. The airport\'s location at the intersection of France and Switzerland offers unique flexibility for onward travel.',
     fboName: 'Geneva Cointrin (LSGG)',
@@ -126,6 +136,7 @@ export const destinations: Destination[] = [
     country: 'Monaco',
     region: 'Europe',
     image: '/images/destinations/monaco.jpg',
+    gallery: ['/images/destinations/monaco-arrival.webp', '/images/destinations/monaco-fbo.webp'],
     description: 'The world\'s most glamorous city-state — yachting, Grand Prix, and Mediterranean luxury.',
     whyFly: 'Nice Cote d\'Azur Airport is the gateway to the Principality, with helicopter transfers to Monaco Heliport taking just 7 minutes — offering one of the world\'s most spectacular arrival experiences.',
     fboName: 'Nice Cote d\'Azur (LFMN)',

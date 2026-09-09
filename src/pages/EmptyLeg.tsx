@@ -92,8 +92,8 @@ export default function EmptyLegPage() {
         title={['The same', 'aircraft, for', 'far less']}
         accent={[2]}
         lead="An aircraft repositioning for its next booking flies the route anyway. If your journey happens to match it, you fly a private jet for a fraction of what chartering it would cost."
-        image="/images/hero_clouds_wing.jpg"
-        imageAlt="Wing above a cloud layer"
+        image="/images/empty-legs/repositioning.webp"
+        imageAlt="Private jet repositioning at sunset"
         meta={[
           { label: 'Available now', value: String(emptyLegs.length) },
           { label: 'Best saving', value: `${bestSaving}%` },

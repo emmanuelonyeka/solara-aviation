@@ -3,6 +3,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import TextReveal from './TextReveal';
 import Reveal from '../shared/Reveal';
+import { getImageFocalPoint } from '../../config/imageFocalPoints';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -71,6 +72,7 @@ export default function PageHero({
           data-hero-image
           src={image}
           alt={imageAlt}
+          style={{ objectPosition: getImageFocalPoint(image) }}
           /* Overhangs the frame by 15% at the top and 15% at the bottom, while
              the parallax only travels 13% of the image height. No edge can be
              exposed even if the tween is holding a stale value — which happens

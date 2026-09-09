@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import Reveal from '../shared/Reveal';
 import TextReveal from './TextReveal';
 import { cta as defaultCta } from '../../config/site';
+import { getImageFocalPoint } from '../../config/imageFocalPoints';
 
 interface CTABandProps {
   eyebrow?: string;
@@ -33,7 +34,7 @@ export default function CTABand({
   return (
     <section className="relative overflow-hidden px-gutter py-[clamp(5rem,10vw,10rem)]">
       <div className="absolute inset-0">
-        <img src={image} alt="" aria-hidden="true" loading="lazy" className="h-full w-full object-cover" />
+        <img src={image} alt="" aria-hidden="true" loading="lazy" className="h-full w-full object-cover" style={{ objectPosition: getImageFocalPoint(image) }} />
         {/* Two layers: a flat wash for contrast, and a vertical gradient that
             darkens top and bottom so the copy never sits on a bright band. */}
         <div className="absolute inset-0 bg-charcoal/80" />

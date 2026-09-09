@@ -79,7 +79,7 @@ export default function Concierge() {
               'Driver briefed on the route before you land',
               'Helicopter transfer where the road adds an hour',
             ]}
-            image="/images/journey_city.jpg"
+            image="/images/concierge/airside-transfer.webp"
             imageAlt="Car waiting on an airport apron"
             cta={{ label: 'Destinations', to: '/destinations' }}
           />
@@ -96,8 +96,8 @@ export default function Concierge() {
               'Private viewings and out-of-hours access',
               'Held allocations at events that publish none',
             ]}
-            image="/images/journey_mountain.jpg"
-            imageAlt="Mountain retreat at dusk"
+            image="/images/concierge/private-access.webp"
+            imageAlt="Private after-hours gallery access arranged for Solara clients"
             cta={{ label: 'Membership', to: '/membership' }}
           />
 
@@ -112,8 +112,8 @@ export default function Concierge() {
               'Private terminal access at both ends',
               'Close protection arranged where required',
             ]}
-            image="/images/safety_runway_hero.jpg"
-            imageAlt="Aircraft on a runway at dusk"
+            image="/images/concierge/private-terminal.webp"
+            imageAlt="Travellers crossing a discreet private terminal to their aircraft"
             cta={{ label: 'Safety standards', to: '/safety' }}
           />
         </div>
@@ -126,7 +126,7 @@ export default function Concierge() {
         lead="The desk is staffed at every hour, in every timezone we fly to. Tell us what the trip actually needs and we will tell you honestly whether it can be done."
         primary={{ label: 'Request a quote', to: '/quote' }}
         secondary={{ label: 'Speak to the desk', to: '/contact' }}
-        image="/images/journey_island.jpg"
+        image="/images/concierge/concierge-desk.webp"
       />
     </PageWrapper>
   );

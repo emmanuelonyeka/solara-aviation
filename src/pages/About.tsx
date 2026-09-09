@@ -71,8 +71,8 @@ export default function About() {
         title={['Founded by', 'people who', 'flew the', 'aircraft']}
         accent={[3]}
         lead="Solara was started by two airline captains who had spent a decade watching charter sold by people who had never operated it. That is still the difference, and it shows up in what we refuse as much as in what we offer."
-        image="/images/journey_mountain.jpg"
-        imageAlt="Aircraft above a mountain range"
+        image="/images/about/founders-hangar.webp"
+        imageAlt="Solara founders reviewing a flight beside a private jet"
         meta={[
           { label: 'Founded', value: String(site.founded) },
           { label: 'Operating', value: `${yearsOperating} years` },
@@ -188,8 +188,8 @@ export default function About() {
               'Peak-date surcharges disclosed at quote, never after',
               'Invoice matches the quote unless the itinerary changed',
             ]}
-            image="/images/journey_city.jpg"
-            imageAlt="City skyline at dusk"
+            image="/images/about/quote-review.webp"
+            imageAlt="Aviation advisers reviewing a transparent charter quotation"
             cta={{ label: 'Request a quote', to: '/quote' }}
           />
         </div>
@@ -202,7 +202,7 @@ export default function About() {
         lead="Which operator is flying you, what their last audit found, and how our quote is built. Every one of those has an answer, and you can have it before you book."
         primary={{ label: 'Request a quote', to: '/quote' }}
         secondary={{ label: 'Speak to us', to: '/contact' }}
-        image="/images/journey_mountain.jpg"
+        image="/images/about/question-cta.webp"
       />
     </PageWrapper>
   );

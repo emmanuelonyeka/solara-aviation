@@ -140,7 +140,7 @@ export default function DestinationDetail() {
         <div className="grid gap-stack lg:grid-cols-12 lg:gap-x-[6%]">
           <Reveal from="fade" className="overflow-hidden lg:col-span-7">
             <img
-              src={item.image}
+              src={item.gallery[0] ?? item.image}
               alt={`Arriving in ${item.city}`}
               loading="lazy"
               className="aspect-[4/3] w-full object-cover"
@@ -168,7 +168,7 @@ export default function DestinationDetail() {
             'Arrive shortly before departure rather than hours ahead',
             'Baggage handled at the aircraft, never on a carousel',
           ]}
-          image={item.image}
+          image={item.gallery[1] ?? item.image}
           imageAlt={`${item.fboName}`}
           cta={{ label: 'Request this route', to: '/quote' }}
         />
@@ -235,7 +235,7 @@ export default function DestinationDetail() {
         lead={`Send your dates and departure city. We will confirm aircraft, airport and pricing for ${item.city} within two hours.`}
         primary={{ label: 'Request a quote', to: '/quote' }}
         secondary={{ label: 'All destinations', to: '/destinations' }}
-        image={item.image}
+        image="/images/concierge/airside-transfer.webp"
       />
     </PageWrapper>
   );

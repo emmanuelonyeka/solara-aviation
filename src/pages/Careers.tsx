@@ -38,8 +38,8 @@ export default function Careers() {
         title={['Where saying', 'no costs you', 'nothing']}
         accent={[2]}
         lead="Every operator claims crew can refuse a sector. Here it is written down, it has happened, and nobody's position changed afterwards. That is the job advert."
-        image="/images/fleet_hangar_hero.jpg"
-        imageAlt="Aircraft in a maintenance hangar"
+        image="/images/careers/crew-briefing.webp"
+        imageAlt="Solara flight crew briefing beside a private jet"
         meta={[
           { label: 'Open roles', value: String(roles.length) },
           { label: 'Based', value: 'Farnborough' },
@@ -190,8 +190,8 @@ export default function Careers() {
             'A decision within five working days, either way',
             'Feedback given whether you ask for it or not',
           ]}
-          image="/images/safety_runway_hero.jpg"
-          imageAlt="Aircraft on a runway at dusk"
+          image="/images/careers/interview.webp"
+          imageAlt="Pilot candidate speaking with the Solara hiring team"
           cta={{ label: 'Our safety standards', to: '/safety' }}
         />
       </Section>
@@ -201,7 +201,7 @@ export default function Careers() {
         title={['Write to us', 'anyway.']}
         accent={[1]}
         lead={`If you fly, dispatch or look after clients at this level, send us something. Applications reach ${site.contact.careersEmail} and are answered by a person within five working days.`}
-        primary={{ label: 'Email the team', to: '/contact' }}
+        primary={{ label: 'Contact the team', to: '/contact' }}
         secondary={{ label: 'About Solara', to: '/about' }}
         image="/images/fleet_hangar_hero.jpg"
       />

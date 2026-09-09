@@ -55,8 +55,8 @@ export default function FAQ() {
         title={['The answers', 'we give on', 'the phone']}
         accent={[2]}
         lead="Written the way we would say them, not the way a legal team would. If your question is not here, the desk will answer it directly."
-        image="/images/fleet/challenger350.jpg"
-        imageAlt="Private jet on the apron"
+        image="/images/faq/client-consultation.webp"
+        imageAlt="Client discussing a private flight with a Solara adviser"
         meta={[
           { label: 'Questions', value: String(faqItems.length) },
           { label: 'Desk', value: site.contact.availability },
@@ -140,7 +140,7 @@ export default function FAQ() {
         lead={`The desk is staffed continuously and answers directly. ${site.contact.responseTime}.`}
         primary={{ label: 'Contact the desk', to: '/contact' }}
         secondary={{ label: 'Read the journal', to: '/blog' }}
-        image="/images/journey_mountain.jpg"
+        image="/images/faq/support-desk.webp"
       />
     </PageWrapper>
   );

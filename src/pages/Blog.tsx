@@ -124,8 +124,8 @@ export default function Blog() {
         title={['Written to be', 'useful, not', 'flattering']}
         accent={[2]}
         lead="Most charter writing exists to sell charter. These are the answers we give clients on the phone, including the ones that talk them out of flying."
-        image="/images/journey_city.jpg"
-        imageAlt="City skyline at dusk"
+        image="/images/blog/editorial-desk.webp"
+        imageAlt="Aviation editor preparing an article at the Solara desk"
         meta={[
           { label: 'Articles', value: String(articles.length) },
           { label: 'Subjects', value: String(articleCategories.length - 1) },
@@ -179,7 +179,7 @@ export default function Blog() {
         lead="If it comes up twice it becomes an article. Either way you get a straight answer rather than a brochure."
         primary={{ label: 'Ask the desk', to: '/contact' }}
         secondary={{ label: 'Common questions', to: '/faq' }}
-        image="/images/journey_mountain.jpg"
+        image="/images/blog/reader-question.webp"
       />
     </PageWrapper>
   );

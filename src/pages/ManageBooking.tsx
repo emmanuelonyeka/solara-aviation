@@ -206,8 +206,8 @@ export default function ManageBooking() {
         title={['Plans change.', 'The handover', 'stays simple.']}
         accent={[2]}
         lead="Send the reference and the exact action you need. The operations desk verifies the booking and confirms every change directly with you."
-        image="/images/hero_clouds_wing.jpg"
-        imageAlt="Wing above a cloud layer"
+        image="/images/manage-booking/support.webp"
+        imageAlt="Operations specialist reviewing a client booking request"
         meta={[
           { label: 'Desk', value: site.contact.availability },
           { label: 'Response', value: 'Within 2 hrs' },

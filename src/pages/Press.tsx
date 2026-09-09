@@ -19,8 +19,8 @@ export default function Press() {
         title={['Facts, dated', 'and on the', 'record']}
         accent={[2]}
         lead="Everything below can be quoted without checking back with us. Anything not on this page, ask — we would rather answer than have it guessed at."
-        image="/images/journey_mountain.jpg"
-        imageAlt="Aircraft above a mountain range"
+        image="/images/press/briefing.webp"
+        imageAlt="Solara spokesperson speaking with an aviation journalist"
         meta={[
           { label: 'Announcements', value: String(releases.length) },
           { label: 'Press desk', value: 'Same calendar day' },
@@ -123,7 +123,7 @@ export default function Press() {
         lead={`Deadlines are respected. Write to ${site.contact.pressEmail} and you will have an answer the same calendar day.`}
         primary={{ label: 'Contact the press desk', to: '/contact' }}
         secondary={{ label: 'About Solara', to: '/about' }}
-        image="/images/journey_mountain.jpg"
+        image="/images/press/desk.webp"
       />
     </PageWrapper>
   );

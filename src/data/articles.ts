@@ -24,7 +24,7 @@ export interface Article {
         'The two most common ways to buy private aviation suit very different flying patterns. The honest answer usually comes down to one number.',
       category: 'Guide',
       date: 'April 2026',
-      image: '/images/membership_window_hero.jpg',
+      image: '/images/articles/jet-card-vs-membership.webp',
       body: [
         'Almost every conversation about buying private aviation arrives at the same fork: a jet card, or an annual membership. Operators have an interest in steering you toward whichever is more profitable for them. Here is the version without that interest.',
         '## The number that decides it',
@@ -49,7 +49,7 @@ export interface Article {
         'A private jet at a fraction of the charter rate is real. The catch is real too, and it is not the one most people expect.',
       category: 'Guide',
       date: 'May 2026',
-      image: '/images/hero_clouds_wing.jpg',
+      image: '/images/articles/empty-legs-explained.webp',
       body: [
         'Aircraft rarely finish where they started. After dropping passengers, one has to return to base or move to its next booking, and on that leg it flies empty. Selling those seats costs the operator nothing they were not already spending, which is why the price falls so far.',
         '## Why the discount is so large',
@@ -73,7 +73,7 @@ export interface Article {
         'Every operator flying commercially holds a certificate. That is the legal minimum, not a standard. Here is what to ask instead.',
       category: 'Safety',
       date: 'March 2026',
-      image: '/images/safety_runway_hero.jpg',
+      image: '/images/articles/safety-audited.webp',
       body: [
         'Safety language in charter is unusually loose, and almost all of it sounds identical. The useful questions are narrower than the marketing suggests.',
         '## A certificate is not an audit',
@@ -99,7 +99,7 @@ export interface Article {
         'For some destinations the private option is a comfort upgrade. For these, it changes what is possible in a day.',
       category: 'Destinations',
       date: 'May 2026',
-      image: '/images/destinations/maldives.jpg',
+      image: '/images/articles/private-destinations.webp',
       body: [
         'Flying private to a major hub saves you an hour of queuing. Flying private to somewhere with no scheduled service saves you a day, and occasionally makes the trip possible at all. The second category is the interesting one.',
         '## Where the runway is the constraint',
@@ -123,7 +123,7 @@ export interface Article {
         'Altitude dulls taste, cabins are dry, and there is no kitchen. Good aircraft catering is an engineering problem before it is a culinary one.',
       category: 'Experience',
       date: 'March 2026',
-      image: '/images/experience/cabin.jpg',
+      image: '/images/articles/inflight-catering.webp',
       body: [
         'A cabin at altitude is pressurised to around six to eight thousand feet and is drier than most deserts. Both facts change how food tastes, and neither is something a chef on the ground has to think about.',
         '## What altitude does to taste',
@@ -147,7 +147,7 @@ export interface Article {
         'The case is not comfort or status. It is how many working hours a scheduled itinerary quietly removes from a week.',
       category: 'Insight',
       date: 'June 2026',
-      image: '/images/journey_city.jpg',
+      image: '/images/articles/private-aviation-arithmetic.webp',
       body: [
         'The usual defence of private aviation is comfort, and it is the weakest one available. A first-class seat is comfortable. The argument that actually holds is about time, and it is easier to make with a calendar than a brochure.',
         '## Count the day, not the flight',
@@ -170,4 +170,3 @@ export interface Article {
   }
   
   export const articleCategories = ['All', ...Array.from(new Set(articles.map((a) => a.category)))];
-  

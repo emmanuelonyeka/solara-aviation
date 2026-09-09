@@ -28,8 +28,8 @@ export default function CorporateCharter() {
         title={['Travel that', 'returns the', 'day to you']}
         accent={[2]}
         lead="For a team of four, the argument is rarely about comfort. It is about how many working hours a scheduled itinerary quietly removes from the week."
-        image="/images/journey_city.jpg"
-        imageAlt="City skyline at dusk"
+        image="/images/corporate/executive-travel.webp"
+        imageAlt="Executive team boarding a private jet for a business itinerary"
         meta={[
           { label: 'Billing', value: 'Monthly, consolidated' },
           { label: 'Booking', value: 'Authorised staff' },
@@ -89,8 +89,8 @@ export default function CorporateCharter() {
         <div className="grid gap-stack lg:grid-cols-12 lg:gap-x-[6%]">
           <Reveal from="fade" className="overflow-hidden lg:col-span-7">
             <img
-              src="/images/fleet/challenger350.jpg"
-              alt="Executive aircraft on the apron"
+              src="/images/corporate/account-review.webp"
+              alt="Corporate aviation account review at a private terminal"
               loading="lazy"
               className="aspect-[4/3] w-full object-cover"
             />
@@ -118,7 +118,7 @@ export default function CorporateCharter() {
               'Single manifest, single arrival',
               'Itinerary changed in the air if the schedule slips',
             ]}
-            image="/images/fleet/g650.jpg"
+            image="/images/fleet/g650-cabin.jpg"
             imageAlt="Private jet cabin configured for a group"
             cta={{ label: 'See the fleet', to: '/fleet' }}
           />
@@ -135,8 +135,8 @@ export default function CorporateCharter() {
               'Emissions per flight and per quarter',
               'Booking patterns, with rate recommendations at renewal',
             ]}
-            image="/images/journey_mountain.jpg"
-            imageAlt="Aircraft above a mountain range"
+            image="/images/corporate/reporting.webp"
+            imageAlt="Executive reviewing charter utilisation and emissions reports"
             cta={{ label: 'Compare programmes', to: '/membership' }}
           />
         </div>

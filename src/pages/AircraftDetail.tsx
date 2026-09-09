@@ -166,7 +166,7 @@ export default function AircraftDetail() {
           <Reveal from="fade" className="overflow-hidden lg:col-span-7">
             <img
               src={item.gallery[0] ?? item.image}
-              alt={`${item.model} cabin and exterior`}
+              alt={`${item.model} cabin interior`}
               loading="lazy"
               className="aspect-[4/3] w-full object-cover"
             />
@@ -194,7 +194,7 @@ export default function AircraftDetail() {
             accent={[2]}
             body={`Cabin class is decided by distance and by what you need to do on the way. The ${item.model} is the aircraft we put forward for these journeys.`}
             points={item.missions}
-            image={item.image}
+            image={item.gallery[1] ?? item.image}
             imageAlt={`${item.model} in flight`}
             cta={{ label: 'Check availability', to: '/quote' }}
           />
@@ -212,8 +212,8 @@ export default function AircraftDetail() {
               `${item.cabinLength} of cabin length`,
               `${item.baggage} of baggage, loaded from outside`,
             ]}
-            image={item.gallery[0] ?? item.image}
-            imageAlt={`${item.model} cabin interior`}
+            image={item.gallery[2] ?? item.gallery[0] ?? item.image}
+            imageAlt={`${item.model} cabin detail`}
             cta={{ label: 'Onboard experience', to: '/experience' }}
           />
         </div>
@@ -246,7 +246,7 @@ export default function AircraftDetail() {
         lead={`Send us your route and dates. We will confirm ${item.model} availability, or put forward the closest alternative, within two hours.`}
         primary={{ label: 'Request a quote', to: '/quote' }}
         secondary={{ label: 'Back to the fleet', to: '/fleet' }}
-        image={item.image}
+        image="/images/hero_clouds_wing.jpg"
       />
     </PageWrapper>
   );

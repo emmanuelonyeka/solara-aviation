@@ -162,8 +162,8 @@ export default function Contact() {
         title={['A person', 'answers,', 'at any hour']}
         accent={[2]}
         lead="Not a ticket queue and not a chatbot. The desk is staffed continuously, and whoever picks up can route or answer the request directly."
-        image="/images/safety_runway_hero.jpg"
-        imageAlt="Aircraft on a runway at dusk"
+        image="/images/contact/operations-desk.webp"
+        imageAlt="Solara operations desk staffed beside the airfield at night"
         meta={[
           { label: 'Desk', value: site.contact.availability },
           { label: 'Written reply', value: 'Within 2 hrs' },
@@ -217,8 +217,8 @@ export default function Contact() {
 
           <Reveal from="fade" className="overflow-hidden lg:col-span-7">
             <img
-              src="/images/journey_city.jpg"
-              alt="City skyline at dusk"
+              src="/images/contact/direct-lines.webp"
+              alt="Solara advisers answering direct client calls"
               loading="lazy"
               className="aspect-[4/3] w-full object-cover"
             />

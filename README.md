@@ -53,9 +53,22 @@ Content and brand information are intentionally separated from page components.
 | Empty-leg examples | `src/data/emptyLegs.ts` |
 | Journal content | `src/data/articles.ts` |
 | Careers and press content | `src/data/careers.ts`, `src/data/press.ts` |
+| Leadership profiles and portrait paths | `src/data/about.ts` |
 | Legal documents | `src/data/legal.ts` |
 | Homepage copy | `src/data/home.ts` |
 | Colours, typography and spacing | `tailwind.config.js` |
+
+## Image library
+
+Production imagery lives in `public/images/` and is grouped by page or subject. Use truthful file extensions: a `.webp` file must contain WebP data, and a `.jpg` file must contain JPEG data. This prevents silent browser failures and keeps the fallback UI reserved for genuinely missing assets.
+
+Leadership portraits belong in `public/images/team/`. Their public paths are assigned to the `photo` fields in `src/data/about.ts`. Portraits use a 3:4 crop; page and editorial imagery use a 3:2 landscape crop. Keep replacement files close to the existing dimensions and run `npm run verify:release` after changing any filename.
+
+Aircraft and destination detail galleries are data-driven:
+
+- `src/data/aircraft.ts` uses the main `image` for the hero and three ordered `gallery` images for cabin, mission and detail sections.
+- `src/data/destinations.ts` uses the main `image` for the hero and two ordered `gallery` images for arrival and FBO sections.
+- `src/data/articles.ts` owns every journal cover, so index cards and article pages cannot drift apart.
 
 ## EmailJS setup
 
